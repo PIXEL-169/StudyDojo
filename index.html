@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="Ambientpage">
+    <div class="top">
+        <div class="header">
+            <h1 id="h1">StudyDojo</h1>
+            <p id="p1">A Timer app to help U study</p>
+        </div>
+        <div class="timecontainer">
+            <div class="timearea">
+                <h1 id="time">00:00:00</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="todocontainer">
+        <div class="TODO">
+            <h2 class="todo">To Do list</h2>
+            <hr>
+            <div class="row">
+                <div class="addtask">
+                    <textarea id="taskinput" placeholder="Add task "></textarea>
+                    <button id="add" onclick="addtask()">Add</button>
+                </div>
+                <button id="drawerbtn">
+                    <img src="right-arrow.png" class="openbtn">
+                </button>
+            </div>
+            <ul id="tasklist">
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="bottom">
+        <div class="player">
+            <div class="playerwrapper">
+                <div class="details">
+                    <div class="name">Track name</div>
+                </div>
+                <div class="mainrow">
+                    <div class="center">
+                        <div class="slidercontainer">
+                            <div class="current_time">00:00</div>
+                            <input type="range" min="1" max="100" value="0" class="slider" onchange="seekTo()">
+                            <div class="totaltime">00:00</div>
+                        </div>
+
+                        <div class="buttons">
+                            <div class="prevtrack" onclick="prevtrack()">
+                                <img src="back.png" class="prev-track"></img>
+                            </div>
+                            <div class="playpause" onclick="playpause()">
+                                <img src="play.png" class="play-pause"></img>
+                            </div>
+                            <div class="nexttrack" onclick="nexttrack()">
+                                <img src="next-(1).png" class="next-track" title="random"></i>
+                            </div>
+                        </div>
+
+                        <div class="volumecontrols">
+                            <img src="volume-down.png" class="volumedown"></img>
+                            <input type="range" min="1" max="100" value="99" class="volumeslider"
+                                onchange="setvolume()">
+                            <img src="volume.png" class="volumeup"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav">
+            <ul class="navul">
+                <li id="home">
+                    <a href="mainpage.html">
+                        <img src="home.png" id="homeicon">
+                    </a>
+                </li>
+                <li id="ambient">
+                    <a href="index.html">
+                        <img src="massage.png" id="ambienticon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
